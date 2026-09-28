@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://p5kj2ubhop6m"]
+
+[ext_resource type="Texture2D" uid="uid://ckrmbhy2g5oxa" path="res://assets/pupu.png" id="1_qdl88"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ch6vm"]
+radius = 7.0
+height = 18.0
+
+[node name="Pumpkin" type="Area2D" unique_id=270052562 groups=["pumpkin"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2122853597]
+texture = ExtResource("1_qdl88")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=939247515]
+shape = SubResource("CapsuleShape2D_ch6vm")

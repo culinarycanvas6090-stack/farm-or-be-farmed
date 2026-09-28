@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bupt3cfgrf5bq"]
+
+[ext_resource type="FontFile" uid="uid://4lyk067aud5a" path="res://assets/KiwiSoda.ttf" id="1_8tjsh"]
+[ext_resource type="Script" uid="uid://c10pesq7ty5g1" path="res://scenes/noise_text.gd" id="1_aq02o"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1169429925]
+
+[node name="NoiseText" type="Label" parent="." unique_id=1622300198]
+z_index = 100
+offset_right = 177.0
+offset_bottom = 42.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_8tjsh")
+theme_override_font_sizes/font_size = 40
+script = ExtResource("1_aq02o")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgynj53q3ai3x"
+path="res://.godot/imported/game title screen (1).mp3-629d34d8be9a703510cc259c2c155916.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/game title screen (1).mp3"
+dest_files=["res://.godot/imported/game title screen (1).mp3-629d34d8be9a703510cc259c2c155916.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

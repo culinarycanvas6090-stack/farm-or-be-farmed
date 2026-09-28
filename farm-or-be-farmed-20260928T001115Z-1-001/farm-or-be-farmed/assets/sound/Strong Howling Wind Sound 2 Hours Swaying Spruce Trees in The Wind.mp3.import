@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqtk7onuwyber"
+path="res://.godot/imported/Strong Howling Wind Sound 2 Hours Swaying Spruce Trees in The Wind.mp3-eefb59aba94bbb4b2778b6f4c2ada0ab.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/Strong Howling Wind Sound 2 Hours Swaying Spruce Trees in The Wind.mp3"
+dest_files=["res://.godot/imported/Strong Howling Wind Sound 2 Hours Swaying Spruce Trees in The Wind.mp3-eefb59aba94bbb4b2778b6f4c2ada0ab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

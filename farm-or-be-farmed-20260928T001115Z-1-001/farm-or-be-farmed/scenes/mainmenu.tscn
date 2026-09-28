@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bm8dfx6rl7yjl"]
+
+[ext_resource type="Texture2D" uid="uid://cwhea74jxpu1c" path="res://assets/landscape-pixelated.png" id="1_r3g3c"]
+[ext_resource type="AudioStream" uid="uid://dm8r0l4cogpcf" path="res://assets/sound/game sounds.mp3" id="2_3vvtq"]
+[ext_resource type="Script" uid="uid://db4qgjslhvyug" path="res://scenes/audio_stream_player.gd" id="3_s5g8n"]
+[ext_resource type="Script" uid="uid://t80vl2osvkc4" path="res://scenes/color_rect.gd" id="4_3vvtq"]
+[ext_resource type="Texture2D" uid="uid://4utkcp0qkqd8" path="res://assets/farm or be farmed title.png" id="5_7yvfd"]
+[ext_resource type="FontFile" uid="uid://4lyk067aud5a" path="res://assets/KiwiSoda.ttf" id="6_dfy5j"]
+[ext_resource type="Script" uid="uid://bnp6fuk151bhx" path="res://scenes/button.gd" id="7_85riq"]
+[ext_resource type="StyleBox" uid="uid://3a1dcmhmr6fu" path="res://button.tres" id="7_dfy5j"]
+
+[node name="Control" type="Control" unique_id=2121999935]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=159297831]
+
+[node name="LandscapePixelated2" type="Sprite2D" parent="CanvasLayer" unique_id=1725131524]
+position = Vector2(577, 327.49997)
+scale = Vector2(0.2330645, 0.18500568)
+texture = ExtResource("1_r3g3c")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer" unique_id=370404673]
+stream = ExtResource("2_3vvtq")
+script = ExtResource("3_s5g8n")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=177248015]
+offset_left = 304.0
+offset_top = 547.0
+offset_right = 842.0
+offset_bottom = 591.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dfy5j")
+theme_override_font_sizes/font_size = 43
+text = "\"click e to interact in game !\""
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1177305130]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -7.0
+offset_top = 195.0
+offset_right = 33.0
+offset_bottom = 235.0
+grow_horizontal = 2
+
+[node name="FarmOrBeFarmedTitle" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1773956200]
+position = Vector2(9.000008, 0.9999962)
+scale = Vector2(0.42503533, 0.42503536)
+texture = ExtResource("5_7yvfd")
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1779226809]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.0
+offset_top = 72.0
+offset_right = 206.0
+offset_bottom = 179.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.43529412, 0.078431375, 0, 1)
+theme_override_colors/font_focus_color = Color(0.9764706, 0.16862746, 0.019607844, 1)
+theme_override_colors/font_pressed_color = Color(0.69411767, 0.16862746, 0.019607844, 1)
+theme_override_colors/font_hover_color = Color(0.9764706, 0.16862746, 0.019607844, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9764706, 0.16862746, 0.019607844, 1)
+theme_override_colors/icon_normal_color = Color(0.9411765, 0.827451, 0.7647059, 1)
+theme_override_colors/icon_focus_color = Color(0.9411765, 0.827451, 0.7647059, 1)
+theme_override_colors/icon_pressed_color = Color(0.9411765, 0.827451, 0.7647059, 1)
+theme_override_colors/icon_hover_color = Color(0.9411765, 0.827451, 0.7647059, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.9411765, 0.827451, 0.7647059, 1)
+theme_override_fonts/font = ExtResource("6_dfy5j")
+theme_override_font_sizes/font_size = 106
+theme_override_styles/normal = ExtResource("7_dfy5j")
+theme_override_styles/pressed = ExtResource("7_dfy5j")
+theme_override_styles/hover = ExtResource("7_dfy5j")
+theme_override_styles/disabled = ExtResource("7_dfy5j")
+theme_override_styles/focus = ExtResource("7_dfy5j")
+text = "start"
+script = ExtResource("7_85riq")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Button" unique_id=895027544]
+visible = false
+layout_mode = 0
+offset_left = -1371.0
+offset_top = -1186.0
+offset_right = 2243.0
+offset_bottom = 1088.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("4_3vvtq")

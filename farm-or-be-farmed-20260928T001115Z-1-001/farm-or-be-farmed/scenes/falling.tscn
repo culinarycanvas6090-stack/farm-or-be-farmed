@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dq20cxbmmskhm"]
+
+[ext_resource type="Texture2D" uid="uid://b2mq53fm80uh1" path="res://assets/falling.png" id="1_5vfpo"]
+[ext_resource type="Script" uid="uid://duqvucor4q471" path="res://scenes/animation_player.gd" id="2_8vbsj"]
+
+[sub_resource type="Animation" id="Animation_of7ru"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Falling:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9.16, 9.16)]
+}
+
+[sub_resource type="Animation" id="Animation_jknnr"]
+resource_name = "falling"
+length = 3.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Falling:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9.16, 9.16), Vector2(0.1575862, 0.1575862)]
+}
+
+[sub_resource type="Animation" id="Animation_tqhrw"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kvval"]
+_data = {
+&"RESET": SubResource("Animation_of7ru"),
+&"falling": SubResource("Animation_jknnr"),
+&"new_animation": SubResource("Animation_tqhrw")
+}
+
+[node name="Control" type="Control" unique_id=1640012874]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 226.0
+offset_top = 82.0
+offset_right = 226.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1215274944]
+layout_mode = 0
+offset_left = -2157.0
+offset_top = -1455.0
+offset_right = 2516.0
+offset_bottom = 1444.0
+color = Color(0, 0, 0, 1)
+
+[node name="Falling" type="Sprite2D" parent="." unique_id=1138149975]
+position = Vector2(354, 242)
+scale = Vector2(9.16, 9.16)
+texture = ExtResource("1_5vfpo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=364538130]
+libraries/ = SubResource("AnimationLibrary_kvval")
+script = ExtResource("2_8vbsj")

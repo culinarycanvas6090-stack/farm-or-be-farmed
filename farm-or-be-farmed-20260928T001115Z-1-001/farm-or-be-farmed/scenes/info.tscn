@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://231i5g7dluao"]
+
+[ext_resource type="FontFile" uid="uid://4lyk067aud5a" path="res://assets/KiwiSoda.ttf" id="2_1t52y"]
+[ext_resource type="Script" uid="uid://gyc3gd4iy0wr" path="res://scenes/color_rect_2.gd" id="2_kin2u"]
+
+[node name="Info" type="Control" unique_id=697448694]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=834332824]
+layout_mode = 0
+offset_left = -1840.0
+offset_top = -1110.0
+offset_right = 3042.0
+offset_bottom = 1735.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1169437109]
+layout_mode = 0
+offset_right = 1142.0
+offset_bottom = 641.0
+theme_override_fonts/font = ExtResource("2_1t52y")
+theme_override_font_sizes/font_size = 30
+text = "You drive your red tractor into the farm you inherited from your uncle.
+
+The wind whistles through the trees around you. It is a pumpkin farm, and it's just about time to harvest. Your engine splutters to a halt outside the barn and refuses to restart. You think nothing of it and go to sleep, ready to harvest in the morning."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1735186396]
+layout_mode = 0
+offset_left = -1001.0
+offset_top = -790.0
+offset_right = 2613.0
+offset_bottom = 1484.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_kin2u")
